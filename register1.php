@@ -42,7 +42,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
   <!-- Registration Form Section -->
   <div class="register-container">
-    <form action="index.php" method="POST" id="registerForm">
+    <form action="register1.php" method="POST" id="registerForm">
       <h2 style="color:green;">Create Your Account</h2>
       <label for="name">Full Name:</label>
       <input type="text" id="name" name="name" required>

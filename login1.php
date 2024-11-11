@@ -15,12 +15,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
   // Check if user exists
   if ($result && $result->num_rows > 0) {
     $user = $result->fetch_assoc();
-    // Debugging output
-    // echo "<p>Database hash: " . htmlspecialchars($user['password']) . "</p>";
-    // echo "<p>Entered password: " . htmlspecialchars($password) . "</p>";
-
-    // Verify entered password with hashed password in the database
-    //if (htmlspecialchars($password)==htmlspecialchars($user['password'])) 
+    
     if (password_verify($password, $user['password'])){
       // If password matches, start session and redirect user
       $_SESSION['user_id'] = $user['id'];
@@ -30,7 +25,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     } else {
       // Debugging output for failed verification
       echo "<p style='color: red; text-align: center;'>Password is incorrect</p>";
-      //echo "<p>Database hash: " . htmlspecialchars($user['password']) . "</p>";
+      
       echo '<!DOCTYPE html>
 <html lang="en">
 <head>

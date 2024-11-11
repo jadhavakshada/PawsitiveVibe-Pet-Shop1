@@ -20,7 +20,7 @@
 
   <!-- Registration Form Section -->
   <div class="register-container">
-    <form action="index.php" method="POST" id="registerForm">
+    <form action="register1.php" method="POST" id="registerForm">
       <h2 style="color:green;">Create Your Account</h2>
       <label for="name">Full Name:</label>
       <input type="text" id="name" name="name" required>
@@ -38,7 +38,7 @@
       <select id="pet-preference" name="pet_preference">
         <option value="dog">Dogs</option>
         <option value="cat">Cats</option>
-        <option value="bird">Birds</option>
+        
       </select>
 
       <button type="submit" class="submit-btn" style="background-color: green;">Join the Pack</button>
